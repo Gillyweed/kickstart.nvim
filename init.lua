@@ -211,6 +211,11 @@ vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz')
 vim.keymap.set('n', 'H', '0')
 vim.keymap.set('n', 'L', '$')
 
+-- change the register so deletions don't hit system clipboard
+vim.keymap.set('n', 'd', '"_d')
+-- change x to act more like 'cut' <C-x> from windows
+vim.keymap.set('n', 'x', 'd')
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
